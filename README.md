@@ -27,19 +27,16 @@ Ensure you have the following installed:
 
 1. Clone the repository:
 
-   ```bash
-   git clone <repository-url>
-   cd <project-directory>
+   git clone "https://github.com/RamChhabra21/ImageQuery.git"
+   cd backend
 Install the dependencies:
 
-bash
-Copy code
+
 pip install -r requirements.txt
 Running the Backend
 Navigate to the backend directory and start the FastAPI server with Uvicorn:
 
-bash
-Copy code
+
 uvicorn main:app --reload
 The server will be running at http://127.0.0.1:8000. You can access the API documentation at http://127.0.0.1:8000/docs.
 
@@ -52,22 +49,15 @@ Ensure you have the following installed:
 Node.js (LTS version recommended)
 npm (Node package manager)
 Installation
-Clone the repository:
-
-bash
-Copy code
-git clone <repository-url>
-cd <frontend-directory>
+git clone "https://github.com/RamChhabra21/ImageQuery.git"
 Install the dependencies:
 
-bash
-Copy code
+cd frontend
 npm install
 Running the Frontend
 Start the frontend server:
 
-bash
-Copy code
+
 npm run dev
 The frontend will be running at http://localhost:3000. You can access the app in your browser.
 
@@ -79,13 +69,11 @@ Upload a list of Google Drive image links to build the dataset.
 
 Request Body:
 json
-Copy code
 {
   "links": ["https://drive.google.com/file/d/xxx/view", "https://drive.google.com/file/d/yyy/view"]
 }
 Response:
 json
-Copy code
 {
   "message": "Dataset updated, duplicates skipped.",
   "total_files": 10,
@@ -98,7 +86,6 @@ Request Body:
 File: An Excel file with a GoogleDriveLinks column containing image URLs.
 Response:
 json
-Copy code
 {
   "status": "success",
   "message": "Dataset uploaded successfully."
@@ -108,14 +95,12 @@ Upload an image file and retrieve the top k similar images from the dataset.
 
 Request Body:
 json
-Copy code
 {
   "file": "<image-file>",
   "k": 5
 }
 Response:
 json
-Copy code
 {
   "similar_images": ["path_to_image1", "path_to_image2", "path_to_image3"]
 }
